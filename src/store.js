@@ -10,5 +10,3 @@ export const store = createStore(
 	{},
 	reduxDevTools && reduxDevTools(),
 );
-
-export const dispatch = store.dispatch;

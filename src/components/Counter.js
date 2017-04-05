@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as counterActions from '../actions/counterActions';
-import { dispatch } from '../store';
 
 @connect(state => ({
 	counter: state.counter,
@@ -22,6 +21,8 @@ export class Counter extends Component {
 	}
 
 	render() {
+		const { dispatch } = this.props;
+
 		return (
 			<div>
 				<h2>
