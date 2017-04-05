@@ -24,9 +24,15 @@ export class Counter extends Component {
 	render() {
 		return (
 			<div>
-				<h2>Counter: {this.props.counter}</h2>
-				<button onClick={() => dispatch(counterActions.decrement())}>-</button>
-				<button onClick={() => dispatch(counterActions.increment())}>+</button>
+				<h2>
+					Counter: {this.props.counter}
+				</h2>
+				<button onClick={() => dispatch(counterActions.decrement())}>
+					-
+				</button>
+				<button onClick={() => dispatch(counterActions.increment())}>
+					+
+				</button>
 			</div>
 		);
 	}
