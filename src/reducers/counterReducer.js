@@ -5,10 +5,9 @@ const handlers = {};
 export function counterReducer(state = 0, action) {
 	if (handlers[action.type]) {
 		return handlers[action.type](state, action.payload);
-	} else {
-		console.error('no action found for: ' + action.type);
-		return state;
 	}
+
+	return state;
 }
 
 handlers[counterActions.INCREMENT] = (state) => {

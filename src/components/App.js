@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Counter } from './Counter';
+import { Messages } from './Messages';
 
 // If you use React Router, make this component
 // render <Router> with your routes. Currently,
@@ -10,7 +11,10 @@ import { Counter } from './Counter';
 export class App extends Component {
   render() {
     return (
-		<Counter />
+		<div>
+			<Counter />
+			<Messages />
+		</div>
     );
   }
 }

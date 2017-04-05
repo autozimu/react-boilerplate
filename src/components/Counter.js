@@ -7,11 +7,7 @@ import * as counterActions from '../actions/counterActions';
 }))
 export class Counter extends Component {
 	static propTypes = {
-		counter: PropTypes.number,
-	};
-
-	static defaultProps = {
-		counter: 0,
+		counter: PropTypes.number.isRequired,
 	};
 
 	state = {};
@@ -29,10 +25,10 @@ export class Counter extends Component {
 					Counter: {this.props.counter}
 				</h2>
 				<button onClick={() => dispatch(counterActions.decrement())}>
-					-
+					--
 				</button>
 				<button onClick={() => dispatch(counterActions.increment())}>
-					+
+					++
 				</button>
 			</div>
 		);
