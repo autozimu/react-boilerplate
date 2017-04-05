@@ -11,6 +11,12 @@ export class Counter extends Component {
 		counter: PropTypes.number,
 	};
 
+	static defaultProps = {
+		counter: 0,
+	};
+
+	state = {};
+
 	constructor(props) {
 		super(props);
 	}
