@@ -5,12 +5,10 @@ import * as counterActions from '../actions/counterActions';
 @connect(state => ({
 	counter: state.counter,
 }))
-export class Counter extends Component {
+export class CounterComponent extends Component {
 	static propTypes = {
 		counter: PropTypes.number.isRequired,
 	};
-
-	state = {};
 
 	constructor(props) {
 		super(props);

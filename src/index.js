@@ -4,7 +4,7 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 
 import { store } from './store';
-import { App } from './components/App';
+import { AppComponent } from './components/AppComponent';
 
 const rootEl = document.getElementById('root');
 const render = Component =>
@@ -17,5 +17,5 @@ const render = Component =>
     rootEl
   );
 
-render(App);
-if (module.hot) module.hot.accept('./components/App', () => render(App));
+render(AppComponent);
+if (module.hot) module.hot.accept('./components/AppComponent', () => render(AppComponent));

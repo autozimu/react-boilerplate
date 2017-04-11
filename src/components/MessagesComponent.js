@@ -6,7 +6,7 @@ import * as messagesActions from '../actions/messagesActions';
 @connect(state => ({
 	messages: state.messages,
 }))
-export class Messages extends React.Component {
+export class MessagesComponent extends React.Component {
 	static propTypes = {
 		messages: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
 	};
