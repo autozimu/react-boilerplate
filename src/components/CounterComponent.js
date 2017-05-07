@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as counterActions from '../actions/counterActions';
-import RaisedButton from 'material-ui/RaisedButton';
+import {Button} from 'semantic-ui-react';
 
 @connect(state => ({
 	counter: state.counter,
@@ -23,16 +23,14 @@ export class CounterComponent extends Component {
 				<h2>
 					Counter: {this.props.counter}
 				</h2>
-                <RaisedButton
-                    secondary
+                <Button
                     onClick={() => dispatch(counterActions.decrement())}>
 					--
-				</RaisedButton>
-                <RaisedButton
-                    primary
+				</Button>
+                <Button
                     onClick={() => dispatch(counterActions.increment())}>
 					++
-				</RaisedButton>
+				</Button>
 			</div>
 		);
 	}

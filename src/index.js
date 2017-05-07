@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import { AppContainer as HotContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
-import { MuiThemeProvider } from 'material-ui';
 
 import { store } from './store';
 import { AppComponent } from './components/AppComponent';
@@ -10,13 +9,11 @@ import { AppComponent } from './components/AppComponent';
 const rootEl = document.getElementById('root');
 const render = Component =>
   ReactDOM.render(
-    <AppContainer>
+    <HotContainer>
 		<Provider store={store}>
-			<MuiThemeProvider>
-				<Component />
-			</MuiThemeProvider>
+            <Component />
 		</Provider>
-    </AppContainer>,
+    </HotContainer>,
     rootEl
   );
 
