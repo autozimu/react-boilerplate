@@ -1,5 +1,7 @@
+//@flow
+
 export function request() {
-	return dispatch => {
+    return (dispatch: Dispatch) => {
 		fetch('http://arch:8080/messages')
 			.then(response => response.json())
 			.then(messages => dispatch(set(messages)))
@@ -8,7 +10,7 @@ export function request() {
 }
 
 export const SET = 'MESSAGES_SET';
-export function set(messages) {
+export function set(messages: Array<string>): Action {
 	return {
 		type: SET,
 		payload: messages,

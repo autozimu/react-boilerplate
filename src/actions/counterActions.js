@@ -1,3 +1,5 @@
+//@flow
+
 export const INCREMENT = 'COUNTER_INCREMENT';
 export function increment() {
 	return {

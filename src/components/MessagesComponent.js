@@ -1,17 +1,15 @@
+//@flow
 import React from 'react';
 import {connect} from 'react-redux';
 import * as messagesActions from '../actions/messagesActions';
 
+type Props = {
+    messages: Array<string>,
+    dispatch: Dispatch,
+}
 
-@connect(state => ({
-	messages: state.messages,
-}))
-export class MessagesComponent extends React.Component {
-	static propTypes = {
-		messages: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-	};
-
-	constructor(props) {
+class MessagesComponentBase extends React.Component<Props> {
+	constructor(props: Props) {
 		super(props);
 	}
 
@@ -32,3 +30,7 @@ export class MessagesComponent extends React.Component {
 		);
 	}
 }
+
+export const MessagesComponent = connect(state => ({
+    messages: state.messages,
+}))(MessagesComponentBase);
