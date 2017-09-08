@@ -12,7 +12,7 @@ export function counterReducer(state: number = 0, action: Action): number {
 }
 
 handlers[counterActions.INCREMENT] = (state) => {
-	return 'nb';
+	return state + 1;
 };
 
 handlers[counterActions.DECREMENT] = (state) => {
