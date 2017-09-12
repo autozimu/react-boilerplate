@@ -1,9 +1,11 @@
 // @flow
 import * as counterActions from '../actions/counterActions';
 
+type State = number;
+
 const handlers = {};
 
-export function counterReducer(state: number = 0, action: Action): number {
+export function counterReducer(state: State = 0, action: Action): State {
 	if (handlers[action.type]) {
 		return handlers[action.type](state, action.payload);
 	}
@@ -11,10 +13,10 @@ export function counterReducer(state: number = 0, action: Action): number {
 	return state;
 }
 
-handlers[counterActions.INCREMENT] = (state) => {
+handlers[counterActions.INCREMENT] = (state: State) => {
 	return state + 1;
 };
 
-handlers[counterActions.DECREMENT] = (state) => {
+handlers[counterActions.DECREMENT] = (state: State) => {
 	return state - 1;
 };
