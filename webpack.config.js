@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const FlowStatusWebpackPlugin = require('flow-status-webpack-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
     entry: [
@@ -34,9 +34,9 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.(js|ts)x?$/,
                 use: [
-                    'babel-loader',
+                    'awesome-typescript-loader',
                 ],
                 exclude: /node_modules/,
             },
@@ -60,12 +60,7 @@ module.exports = {
         new webpack.NoEmitOnErrorsPlugin(),
         // do not emit compiled assets that include errors
 
-        // report flow status after each build
-        new FlowStatusWebpackPlugin({
-            onError: function(stdout) {
-                console.log(stdout)
-            },
-        }),
+        new CheckerPlugin(),
     ],
 
     devServer: {

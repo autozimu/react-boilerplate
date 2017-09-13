@@ -1,5 +1,5 @@
-// @flow
 import * as counterActions from '../actions/counterActions';
+import {Action} from '../models/Action';
 
 type State = number;
 
@@ -13,10 +13,10 @@ export function counterReducer(state: State = 0, action: Action): State {
 	return state;
 }
 
-handlers[counterActions.INCREMENT] = (state: State) => {
+handlers[counterActions.INCREMENT] = function(state: State): State {
 	return state + 1;
 };
 
-handlers[counterActions.DECREMENT] = (state: State) => {
+handlers[counterActions.DECREMENT] = function(state: State): State {
 	return state - 1;
 };

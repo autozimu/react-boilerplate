@@ -1,7 +1,7 @@
-//@flow
+import {Action} from '../models/Action';
 
 export function request() {
-    return (dispatch: Dispatch) => {
+    return dispatch  => {
 		fetch('http://arch:8080/messages')
 			.then(response => response.json())
 			.then(messages => dispatch(set(messages)))
