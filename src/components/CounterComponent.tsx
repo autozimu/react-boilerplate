@@ -36,4 +36,4 @@ class CounterComponentBase extends React.Component<Props, {}> {
 
 export const CounterComponent = connect(state => ({
     counter: state.counter,
-}))(CounterComponentBase);
+}))(CounterComponentBase) as React.ComponentClass<{}>;

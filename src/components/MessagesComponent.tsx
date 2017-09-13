@@ -31,4 +31,4 @@ class MessagesComponentBase extends React.Component<Props, {}> {
 
 export const MessagesComponent = connect(state => ({
     messages: state.messages,
-}))(MessagesComponentBase);
+}))(MessagesComponentBase) as React.ComponentClass<{}>;
