@@ -1,6 +1,5 @@
-//@flow
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { AppContainer as HotContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 

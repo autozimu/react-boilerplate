@@ -1,19 +1,14 @@
-//@flow
-import React, { Component, PropTypes } from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 import * as counterActions from '../actions/counterActions';
 import {Button} from 'semantic-ui-react';
 
-type Props = {
-    counter: number,
-    dispatch: Dispatch,
+interface Props {
+    counter: number;
+    dispatch: any;
 };
 
-class CounterComponentBase extends Component<Props> {
-	static propTypes = {
-		counter: PropTypes.number.isRequired,
-	};
-
+class CounterComponentBase extends React.Component<Props, {}> {
 	constructor(props: Props) {
 		super(props);
 	}

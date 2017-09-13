@@ -15,7 +15,7 @@ module.exports = {
         // bundle the client for hot reloading
         // only- means to only hot reload for successful updates
 
-        './src/index.js',
+        './src/index',
         // the entry point of our app
     ],
 
@@ -30,6 +30,10 @@ module.exports = {
     },
 
     devtool: 'inline-source-map',
+
+    resolve: {
+        "extensions": ['.tsx', '.ts', '.jsx', '.js']
+    },
 
     module: {
         rules: [
