@@ -18,4 +18,6 @@ const render = Component =>
   );
 
 render(AppComponent);
+
+declare var module: any;
 if (module.hot) module.hot.accept('./components/AppComponent', () => render(AppComponent));
