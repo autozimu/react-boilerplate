@@ -1,5 +1,5 @@
-//@flow
 import * as messagesActions from '../actions/messagesActions';
+import {Action} from '../models/Action';
 
 type State = Array<string>;
 
@@ -13,6 +13,6 @@ export function messagesReducer(state: State = [], action: Action): State {
 	return state;
 }
 
-handlers[messagesActions.SET] = (state: State, message: State) => {
+handlers[messagesActions.SET] = function(state: State, message: State): State {
 	return message;
 };
