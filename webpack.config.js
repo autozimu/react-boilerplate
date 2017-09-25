@@ -38,7 +38,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|ts)x?$/,
+                test: /\.(ts|js)x?$/,
                 use: [
                     'awesome-typescript-loader',
                 ],
