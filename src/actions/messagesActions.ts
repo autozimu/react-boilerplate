@@ -9,10 +9,13 @@ export function request() {
 	};
 }
 
-export const SET = 'MESSAGES_SET';
+export enum ActionTypes {
+    Set = 'MESSAGES_SET',
+}
+
 export function set(messages: Array<string>): Action {
 	return {
-		type: SET,
+		type: ActionTypes.Set,
 		payload: messages,
 	};
 }

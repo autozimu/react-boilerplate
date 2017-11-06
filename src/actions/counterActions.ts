@@ -1,17 +1,20 @@
 import {Action} from '../models/Action';
 
-export const INCREMENT = 'COUNTER_INCREMENT';
+export enum ActionTypes {
+    Increment = 'COUNTER_INCREMENT',
+    Decrement = 'COUNTER_DECREMENT',
+};
+
 export function increment(): Action {
 	return {
-		type: INCREMENT,
+		type: ActionTypes.Increment,
 		payload: {}
 	};
 }
 
-export const DECREMENT = 'COUNTER_DECREMENT';
 export function decrement(): Action {
 	return {
-		type: DECREMENT,
+		type: ActionTypes.Decrement,
 		payload: {}
 	};
 }

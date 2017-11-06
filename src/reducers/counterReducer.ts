@@ -1,4 +1,4 @@
-import * as counterActions from '../actions/counterActions';
+import {ActionTypes} from '../actions/counterActions';
 import {Action} from '../models/Action';
 
 type State = number;
@@ -13,10 +13,10 @@ export function counterReducer(state: State = 0, action: Action): State {
 	return state;
 }
 
-handlers[counterActions.INCREMENT] = function(state: State): State {
+handlers[ActionTypes.Increment] = function(state: State): State {
 	return state + 1;
 };
 
-handlers[counterActions.DECREMENT] = function(state: State): State {
+handlers[ActionTypes.Decrement] = function(state: State): State {
 	return state - 1;
 };

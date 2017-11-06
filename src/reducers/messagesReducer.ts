@@ -1,4 +1,4 @@
-import * as messagesActions from '../actions/messagesActions';
+import {ActionTypes} from '../actions/messagesActions';
 import {Action} from '../models/Action';
 
 type State = Array<string>;
@@ -13,6 +13,6 @@ export function messagesReducer(state: State = [], action: Action): State {
 	return state;
 }
 
-handlers[messagesActions.SET] = function(state: State, message: State): State {
+handlers[ActionTypes.Set] = function(state: State, message: State): State {
 	return message;
 };
