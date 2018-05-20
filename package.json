@@ -5,6 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --fix --project tsconfig.json",
     "prettier": "prettier --write 'src/**/*.ts'",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.production.js",
