@@ -7,7 +7,8 @@
     "lint": "tslint --project tsconfig.json",
     "lint-fix": "tslint --fix --project tsconfig.json",
     "prettier": "prettier --write 'src/**/*.ts'",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "clean": "rm -rf build && rm -rf dist"
   },
   "repository": {
     "type": "git",
@@ -17,26 +18,21 @@
   "author": "Junfeng Li <autozimu@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "react-redux": "^5.0.3",
-    "redux": "^3.7.2",
-    "semantic-ui-react": "^0.68.3"
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.80.0"
   },
   "devDependencies": {
     "@types/react": "^16.0.5",
     "@types/react-dom": "^15.5.4",
     "@types/react-redux": "^5.0.8",
     "@types/redux": "^3.6.0",
-    "awesome-typescript-loader": "^3.2.3",
-    "copyfiles": "^1.2.0",
-    "cross-env": "^3.1.4",
-    "css-loader": "^0.28.1",
     "parcel-bundler": "^1.8.1",
     "prettier": "^1.12.1",
-    "react-hot-loader": "^3.0.0-beta.6",
-    "redux-thunk": "^2.2.0",
-    "style-loader": "^0.17.0",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.13.0",
     "tslint-react": "^3.6.0",
