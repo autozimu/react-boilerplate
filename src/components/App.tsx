@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { CounterComponent } from './CounterComponent';
-import { MessagesComponent } from './MessagesComponent';
+import { Counter } from './Counter';
+import { Messages } from './Messages';
 
 // If you use React Router, make this component
 // render <Router> with your routes. Currently,
@@ -8,12 +8,12 @@ import { MessagesComponent } from './MessagesComponent';
 // you will see a warning from <Router> on every reload.
 // You can ignore this warning. For details, see:
 // https://github.com/reactjs/react-router/issues/2182
-export class AppComponent extends React.Component<{}, {}> {
+export class App extends React.Component<{}, {}> {
     public render() {
         return (
             <div>
-                <CounterComponent />
-                <MessagesComponent />
+                <Counter />
+                <Messages />
             </div>
         );
     }

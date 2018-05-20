@@ -8,7 +8,7 @@ interface IProps {
     dispatch: any;
 };
 
-class CounterComponentBase extends React.Component<IProps, {}> {
+class CounterBase extends React.Component<IProps, {}> {
     constructor(props: IProps) {
         super(props);
     }
@@ -34,6 +34,6 @@ class CounterComponentBase extends React.Component<IProps, {}> {
     }
 }
 
-export const CounterComponent = connect(state => ({
+export const Counter = connect(state => ({
     counter: state.counter,
-}))(CounterComponentBase) as React.ComponentClass<{}>;
+}))(CounterBase) as React.ComponentClass<{}>;

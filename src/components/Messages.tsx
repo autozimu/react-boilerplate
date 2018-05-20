@@ -7,7 +7,7 @@ interface IProps {
     dispatch: any;
 }
 
-class MessagesComponentBase extends React.Component<IProps> {
+class MessagesBase extends React.Component<IProps> {
     constructor(props: IProps) {
         super(props);
     }
@@ -29,6 +29,6 @@ class MessagesComponentBase extends React.Component<IProps> {
     }
 }
 
-export const MessagesComponent = connect(state => ({
+export const Messages = connect(state => ({
     messages: state.messages,
-}))(MessagesComponentBase) as React.ComponentClass<{}>;
+}))(MessagesBase) as React.ComponentClass<{}>;
