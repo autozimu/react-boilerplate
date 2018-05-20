@@ -1,14 +1,12 @@
 {
     "compilerOptions": {
         "outDir": "build",
-        "module": "commonjs",
         "sourceMap": true,
         "allowJs": true,
         "checkJs": true,
+        "strict": true,
         "jsx": "React",
-        "alwaysStrict": true,
-        "strictNullChecks": true,
-        "noImplicitThis": true
+        "pretty": true
     },
     "include": [
         "src/**/*"

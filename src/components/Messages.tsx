@@ -29,6 +29,6 @@ class MessagesBase extends React.Component<IProps> {
     }
 }
 
-export const Messages = connect(state => ({
+export const Messages = connect((state: IState) => ({
     messages: state.messages,
-}))(MessagesBase) as React.ComponentClass<{}>;
+}))(MessagesBase);

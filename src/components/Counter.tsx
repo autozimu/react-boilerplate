@@ -6,7 +6,7 @@ import * as counterActions from '../actions/counterActions';
 interface IProps {
     counter: number;
     dispatch: any;
-};
+}
 
 class CounterBase extends React.Component<IProps, {}> {
     constructor(props: IProps) {
@@ -34,6 +34,6 @@ class CounterBase extends React.Component<IProps, {}> {
     }
 }
 
-export const Counter = connect(state => ({
+export const Counter = connect((state: IState) => ({
     counter: state.counter,
-}))(CounterBase) as React.ComponentClass<{}>;
+}))(CounterBase);
