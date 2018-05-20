@@ -9,12 +9,12 @@ import { MessagesComponent } from './MessagesComponent';
 // You can ignore this warning. For details, see:
 // https://github.com/reactjs/react-router/issues/2182
 export class AppComponent extends React.Component<{}, {}> {
-  render() {
-    return (
-		<div>
-			<CounterComponent />
-			<MessagesComponent />
-		</div>
-    );
-  }
+    public render() {
+        return (
+            <div>
+                <CounterComponent />
+                <MessagesComponent />
+            </div>
+        );
+    }
 }

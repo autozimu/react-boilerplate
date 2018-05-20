@@ -1,37 +1,37 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import * as counterActions from '../actions/counterActions';
 import {Button} from 'semantic-ui-react';
+import * as counterActions from '../actions/counterActions';
 
-interface Props {
+interface IProps {
     counter: number;
     dispatch: any;
 };
 
-class CounterComponentBase extends React.Component<Props, {}> {
-	constructor(props: Props) {
-		super(props);
-	}
+class CounterComponentBase extends React.Component<IProps, {}> {
+    constructor(props: IProps) {
+        super(props);
+    }
 
-	render() {
-		const { dispatch } = this.props;
+    public render() {
+        const { dispatch } = this.props;
 
-		return (
-			<div>
-				<h2>
-					Counter: {this.props.counter}
-				</h2>
+        return (
+            <div>
+                <h2>
+                    Counter: {this.props.counter}
+                </h2>
                 <Button
                     onClick={() => dispatch(counterActions.decrement())}>
-					--
-				</Button>
+                    --
+                </Button>
                 <Button
                     onClick={() => dispatch(counterActions.increment())}>
-					++
-				</Button>
-			</div>
-		);
-	}
+                    ++
+                </Button>
+            </div>
+        );
+    }
 }
 
 export const CounterComponent = connect(state => ({

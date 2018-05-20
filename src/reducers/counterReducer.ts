@@ -1,22 +1,22 @@
-import {ActionTypes} from '../actions/counterActions';
-import {Action} from '../models/Action';
+import { ActionTypes } from "../actions/counterActions";
+import { IAction } from "../models/IAction";
 
 type State = number;
 
 const handlers = {};
 
-export function counterReducer(state: State = 0, action: Action): State {
-	if (handlers[action.type]) {
-		return handlers[action.type](state, action.payload);
-	}
+export function counterReducer(state: State = 0, action: IAction): State {
+  if (handlers[action.type]) {
+    return handlers[action.type](state, action.payload);
+  }
 
-	return state;
+  return state;
 }
 
 handlers[ActionTypes.Increment] = function(state: State): State {
-	return state + 1;
+  return state + 1;
 };
 
 handlers[ActionTypes.Decrement] = function(state: State): State {
-	return state - 1;
+  return state - 1;
 };

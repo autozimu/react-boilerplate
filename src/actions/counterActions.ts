@@ -1,20 +1,20 @@
-import {Action} from '../models/Action';
+import { IAction } from "../models/IAction";
 
 export enum ActionTypes {
-    Increment = 'COUNTER_INCREMENT',
-    Decrement = 'COUNTER_DECREMENT',
-};
-
-export function increment(): Action {
-	return {
-		type: ActionTypes.Increment,
-		payload: {}
-	};
+  Increment = "COUNTER_INCREMENT",
+  Decrement = "COUNTER_DECREMENT"
 }
 
-export function decrement(): Action {
-	return {
-		type: ActionTypes.Decrement,
-		payload: {}
-	};
+export function increment(): IAction {
+  return {
+    type: ActionTypes.Increment,
+    payload: {}
+  };
+}
+
+export function decrement(): IAction {
+  return {
+    type: ActionTypes.Decrement,
+    payload: {}
+  };
 }

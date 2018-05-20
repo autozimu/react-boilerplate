@@ -1,18 +1,18 @@
-import {ActionTypes} from '../actions/messagesActions';
-import {Action} from '../models/Action';
+import { ActionTypes } from "../actions/messagesActions";
+import { IAction } from "../models/IAction";
 
-type State = Array<string>;
+type State = string[];
 
 const handlers = {};
 
-export function messagesReducer(state: State = [], action: Action): State {
-	if (handlers[action.type]) {
-		return handlers[action.type](state, action.payload);
-	}
+export function messagesReducer(state: State = [], action: IAction): State {
+  if (handlers[action.type]) {
+    return handlers[action.type](state, action.payload);
+  }
 
-	return state;
+  return state;
 }
 
 handlers[ActionTypes.Set] = function(state: State, message: State): State {
-	return message;
+  return message;
 };

@@ -1,15 +1,13 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import ReduxThunk from 'redux-thunk';
+import { applyMiddleware, compose, createStore } from "redux";
+import ReduxThunk from "redux-thunk";
+import { reducer } from "./reducers/index";
 
-import { reducer } from './reducers/index';
-
-
-const composeEnhancers = window['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'] || compose;
+// tslint:disable:no-string-literal
+const composeEnhancers =
+  window["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"] || compose;
 
 export const store = createStore(
-	reducer,
-	{},
-	composeEnhancers(
-		applyMiddleware(ReduxThunk),
-	),
+  reducer,
+  {},
+  composeEnhancers(applyMiddleware(ReduxThunk))
 );
