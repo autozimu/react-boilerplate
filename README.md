@@ -9,6 +9,9 @@ yarn start
 open http://localhost:1234
 ```
 
+Also make sure "safe write" is disabled in your IDE/editor to make Hot Module Replacement work.
+<https://parceljs.org/hmr.html#safe-write>
+
 # Linting
 ```sh
 yarn run lint
@@ -23,9 +26,3 @@ yarn run lint-fix
 ```sh
 yarn run build
 ```
-
-# WebStorm
-
-Because the WebStorm IDE uses "safe writes" by default, Webpack's file-watcher
-won't recognize file changes, so hot-loading won't work. To fix this, disable
-"safe write" in WebStorm.
