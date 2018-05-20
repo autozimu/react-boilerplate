@@ -17,6 +17,13 @@
   "keywords": [],
   "author": "Junfeng Li <autozimu@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "redux": "^3.7.2",
+    "semantic-ui-react": "^0.68.3"
+  },
   "devDependencies": {
     "@types/react": "^16.0.5",
     "@types/react-dom": "^15.5.4",
@@ -37,12 +44,5 @@
     "typescript": "^2.5.2",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0"
-  },
-  "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-redux": "^5.0.3",
-    "redux": "^3.7.2",
-    "semantic-ui-react": "^0.68.3"
   }
 }
