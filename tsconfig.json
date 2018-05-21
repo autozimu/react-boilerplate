@@ -1,17 +1,19 @@
 {
     "compilerOptions": {
-        "outDir": "build",
+        "outDir": "build/js",
+        "target": "ES5",
+        "skipLibCheck": true,
+        "rootDir": "src",
         "sourceMap": true,
         "allowJs": true,
         "checkJs": true,
         "strict": true,
+        "suppressImplicitAnyIndexErrors": true,
         "jsx": "React",
         "pretty": true
     },
-    "include": [
-        "src/**/*"
-    ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "build"
     ]
 }
