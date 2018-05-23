@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Counter } from './Counter';
-import { Messages } from './Messages';
+import * as React from "react";
+import { Counter } from "./Counter";
+import { Messages } from "./Messages";
 
 // If you use React Router, make this component
 // render <Router> with your routes. Currently,
@@ -9,12 +9,12 @@ import { Messages } from './Messages';
 // You can ignore this warning. For details, see:
 // https://github.com/reactjs/react-router/issues/2182
 export class App extends React.Component<{}, {}> {
-    public render() {
-        return (
-            <div>
-                <Counter />
-                <Messages />
-            </div>
-        );
-    }
+  public render() {
+    return (
+      <div>
+        <Counter />
+        <Messages />
+      </div>
+    );
+  }
 }

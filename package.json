@@ -7,7 +7,7 @@
     "start": "parcel index.html",
     "lint": "tslint --project tsconfig.json",
     "lint-fix": "tslint --fix --project tsconfig.json",
-    "prettier": "prettier --write 'src/**/*.ts'",
+    "prettier": "prettier --write 'src/**/*.ts*'",
     "build": "parcel build index.html",
     "clean": "rm -rf build"
   },
