@@ -1,19 +1,18 @@
 {
-    "compilerOptions": {
-        "outDir": "build/js",
-        "target": "ES5",
-        "skipLibCheck": true,
-        "rootDir": "src",
-        "sourceMap": true,
-        "allowJs": true,
-        "checkJs": true,
-        "strict": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "jsx": "React",
-        "pretty": true
-    },
-    "exclude": [
-        "node_modules",
-        "build"
-    ]
+  "compilerOptions": {
+    "outDir": "build/js",
+    "target": "ES5",
+    "module": "CommonJS",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "rootDir": "src",
+    "sourceMap": true,
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "jsx": "React",
+    "pretty": true
+  },
+  "exclude": ["node_modules", "build", "dist"]
 }

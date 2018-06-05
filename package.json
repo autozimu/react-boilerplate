@@ -5,10 +5,11 @@
   "private": true,
   "scripts": {
     "start": "parcel index.html",
-    "lint": "tslint --project tsconfig.json",
-    "lint-fix": "tslint --fix --project tsconfig.json",
-    "prettier": "prettier --write 'src/**/*.ts*'",
+    "lint": "tslint --fix --project tsconfig.json",
+    "prettier": "prettier --write 'src/**/*.ts*' tsconfig.json tslint.json",
     "build": "parcel build index.html",
+    "tsc": "tsc",
+    "release": "npm run build && npm run tsc && npm run prettier && npm run lint",
     "clean": "rm -rf build"
   },
   "repository": {
