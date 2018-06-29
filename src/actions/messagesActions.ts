@@ -1,8 +1,8 @@
+import { Dispatch } from "redux";
 import { IAction } from "../models/IAction";
-import { IDispatch } from "../models/types";
 
-export function request() {
-  return (dispatch: IDispatch) =>
+export function request(): any {
+  return (dispatch: Dispatch<IAction>) =>
     fetch("http://arch:8080/messages")
       .then(response => response.json())
       .then(messages => dispatch(set(messages)))

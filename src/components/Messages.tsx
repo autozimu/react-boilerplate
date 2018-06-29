@@ -1,11 +1,12 @@
-import React from "react";
+import * as React from "react";
 import { connect } from "react-redux";
+import { Dispatch } from "redux";
 import * as messagesActions from "../actions/messagesActions";
-import { IDispatch } from "../models/types";
+import { IAction } from "../models/IAction";
 
 interface IProps {
   messages: string[];
-  dispatch: IDispatch;
+  dispatch: Dispatch<IAction>;
 }
 
 class MessagesBase extends React.Component<IProps> {

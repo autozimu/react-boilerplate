@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "build/js",
-    "target": "ES5",
-    "module": "CommonJS",
-    "allowSyntheticDefaultImports": true,
+    "target": "es5",
     "skipLibCheck": true,
     "rootDir": "src",
     "sourceMap": true,
@@ -14,5 +12,5 @@
     "jsx": "React",
     "pretty": true
   },
-  "exclude": ["node_modules", "build", "dist"]
+  "exclude": ["node_modules", "build", "webpack.config.js"]
 }

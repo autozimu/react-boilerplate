@@ -4,12 +4,11 @@
   "description": "Boilerplate for ReactJS project",
   "private": true,
   "scripts": {
-    "start": "parcel index.html",
+    "start": "webpack-dev-server",
     "lint": "tslint --fix --project tsconfig.json",
-    "prettier": "prettier --write 'src/**/*.ts*' tsconfig.json tslint.json",
-    "build": "parcel build index.html",
-    "tsc": "tsc",
-    "release": "npm run build && npm run tsc && npm run prettier && npm run lint",
+    "prettier": "prettier --write 'src/**/*.ts*' 'webpack.config*' tsconfig.json tslint.json",
+    "build": "webpack",
+    "release": "tsc && npm run build && npm run prettier && npm run lint",
     "clean": "rm -rf build"
   },
   "repository": {
@@ -20,13 +19,21 @@
   "author": "Junfeng Li <autozimu@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "awesome-typescript-loader": "^5.2.0",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-hot-loader": "^4.3.3",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
-    "redux-thunk": "^2.2.0",
+    "redux-thunk": "^2.3.0",
     "semantic-ui-css": "^2.3.1",
-    "semantic-ui-react": "^0.80.0"
+    "semantic-ui-react": "^0.80.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.13.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   },
   "devDependencies": {
     "@types/react": "^16.3.14",

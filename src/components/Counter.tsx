@@ -1,12 +1,13 @@
-import React from "react";
+import * as React from "react";
 import { connect } from "react-redux";
+import { Dispatch } from "redux";
 import { Button } from "semantic-ui-react";
 import * as counterActions from "../actions/counterActions";
-import { IDispatch } from "../models/types";
+import { IAction } from "../models/IAction";
 
 interface IProps {
   counter: number;
-  dispatch: IDispatch;
+  dispatch: Dispatch<IAction>;
 }
 
 class CounterBase extends React.Component<IProps, {}> {
