@@ -10,7 +10,7 @@ interface IProps {
   dispatch: Dispatch<IAction>;
 }
 
-class CounterBase extends React.Component<IProps, {}> {
+export class CounterBase extends React.Component<IProps, {}> {
   constructor(props: IProps) {
     super(props);
   }
