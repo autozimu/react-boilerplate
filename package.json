@@ -5,10 +5,11 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server",
+    "build": "webpack",
+    "test": "jest",
     "lint": "tslint --fix --project tsconfig.json",
     "prettier": "prettier --write 'src/**/*.ts*' 'webpack.config*' tsconfig.json tslint.json",
-    "build": "webpack",
-    "release": "tsc && npm run build && npm run prettier && npm run lint",
+    "release": "npm run build && npm run test && npm run prettier && npm run lint",
     "clean": "rm -rf build"
   },
   "repository": {

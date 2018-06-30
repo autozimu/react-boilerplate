@@ -1,6 +1,6 @@
+import { mount } from "enzyme";
 import * as React from "react";
 import { CounterBase } from "./Counter";
-import { mount } from "enzyme";
 
 test("Counter should be able to render", () => {
   const dispatch = jest.fn();
