@@ -8,6 +8,7 @@ export function request(): any {
       .then(messages => dispatch(set(messages)))
       // tslint:disable:no-console
       .catch(err => console.error(err));
+      // tslint:enable:no-console
 }
 
 export enum ActionTypes {
