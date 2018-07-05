@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "build/js",
+    "outDir": "build/target",
     "target": "es5",
     "skipLibCheck": true,
     "rootDir": "src",
